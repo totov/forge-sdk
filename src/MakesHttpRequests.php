@@ -68,9 +68,17 @@ trait MakesHttpRequests
      */
     protected function request($verb, $uri, array $payload = [])
     {
-        $response = $this->guzzle->request($verb, $uri,
-            empty($payload) ? [] : ['form_params' => $payload]
-        );
+        $options = [
+            'connect_timeout' => $this->timeout,
+            'read_timeout' => $this->timeout,
+            'timeout' => $this->timeout,
+        ];
+
+        if(! empty($payload)) {
+            $options['form_params'] = $payload;
+        }
+
+        $response = $this->guzzle->request($verb, $uri, $options);
 
         $statusCode = $response->getStatusCode();
 
