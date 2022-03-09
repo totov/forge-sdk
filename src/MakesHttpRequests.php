@@ -74,6 +74,10 @@ trait MakesHttpRequests
             $payload = empty($payload) ? [] : ['form_params' => $payload];
         }
 
+        $payload['connect_timeout'] = $payload['connect_timeout'] ?? $this->timeout;
+        $payload['read_timeout'] = $payload['read_timeout'] ?? $this->timeout;
+        $payload['timeout'] = $payload['timeout'] ?? $this->timeout;
+
         $response = $this->guzzle->request($verb, $uri, $payload);
 
         $statusCode = $response->getStatusCode();
