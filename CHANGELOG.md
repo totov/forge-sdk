@@ -1,6 +1,28 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/forge-sdk/compare/v3.13.0...3.x)
+## [Unreleased](https://github.com/laravel/forge-sdk/compare/v3.13.3...3.x)
+
+## [v3.13.3](https://github.com/laravel/forge-sdk/compare/v3.13.2...v3.13.3) - 2022-11-09
+
+### Fixed
+
+- Add username to ssh key by @barryvdh in https://github.com/laravel/forge-sdk/pull/151
+
+## [v3.13.2](https://github.com/laravel/forge-sdk/compare/v3.13.1...v3.13.2) - 2022-11-01
+
+### Changed
+
+- Add Exception for Exceeding Forge API Rate Limit by @DexterHarrison in https://github.com/laravel/forge-sdk/pull/149
+
+## [v3.13.1](https://github.com/laravel/forge-sdk/compare/v3.13.0...v3.13.1) - 2022-05-31
+
+### Changed
+
+- Add updated server provider keys by @jbrooksuk in https://github.com/laravel/forge-sdk/pull/137
+
+### Fixed
+
+- Ensure timout exception always recieves an array by @timacdonald in https://github.com/laravel/forge-sdk/pull/143
 
 ## [v3.13.0](https://github.com/laravel/forge-sdk/compare/v3.12.0...v3.13.0) - 2022-03-08
 
